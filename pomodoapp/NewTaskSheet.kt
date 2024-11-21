@@ -6,6 +6,8 @@ import android.view.View
 import android.view.ViewGroup
 import com.bignerdranch.android.pomodoapp.databinding.FragmentNewTaskSheetBinding
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
+import androidx.fragment.app.activityViewModels
+
 import kotlin.properties.ReadOnlyProperty
 
 class NewTaskSheet : BottomSheetDialogFragment() {
@@ -17,10 +19,6 @@ class NewTaskSheet : BottomSheetDialogFragment() {
 
     // Use activityViewModels to share the ViewModel instance with the parent activity
     private val taskViewModel: TaskViewModel by activityViewModels()
-
-    private fun activityViewModels(): ReadOnlyProperty<NewTaskSheet, TaskViewModel> {
-
-    }
 
     override fun onCreateView(
         inflater: LayoutInflater,
